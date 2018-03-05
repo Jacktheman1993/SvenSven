@@ -58,7 +58,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-#DB
+# DB
 **/DataSource.java
 
 # End of https://www.gitignore.io/api/macos,windows,netbeans

@@ -18,7 +18,7 @@ public class DataSource
     
     public DataSource()
     {
-        dataSource.setServerName("159.89.110.12");
+        dataSource.setServerName("");
         dataSource.setPort(3306);
         dataSource.setDatabaseName("cupcake");
         dataSource.setUser("swoop");

@@ -21,8 +21,8 @@ public class DataSource
         dataSource.setServerName("");
         dataSource.setPort(3306);
         dataSource.setDatabaseName("cupcake");
-        dataSource.setUser("swoop");
-        dataSource.setPassword("airdog86");
+        dataSource.setUser("alek");
+        dataSource.setPassword("pyg25ckd");
     }
     
     public MysqlDataSource getDataSource()

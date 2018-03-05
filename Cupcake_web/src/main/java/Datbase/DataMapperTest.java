@@ -12,14 +12,14 @@ package Datbase;
 public class DataMapperTest {
        public static void main(String[] args)
     {
-        DataMapper dm = new DataMapper(new DataSource().getDataSource());
-        
-        System.out.println("getUsers: " + dm.getUsers());
-        System.out.println("getUserByName: " + dm.getUser("Martin"));
-        System.out.println("getUserById: " + dm.getUser(4));
+//        DataMapper dm = new DataMapper(new DataSource().getDataSource());
+//        
+//        System.out.println("getUsers: " + dm.getUsers());
+//        System.out.println("getUserByName: " + dm.getUser("Martin"));
+//        System.out.println("getUserById: " + dm.getUser(4));
 //        System.out.println("createUser: " + dm.createUser(new User(8, "hharlie", "cghh@mail", 50, "1234")));
 //        System.out.println("deleteUser: " + dm.deleteUser(7));
 //        System.out.println("updateUser: " + dm.updateUser(new User(4, "Bo", "1234@mail.com", 40, "false")));
-        System.out.println("validateUser: " + dm.validateUser("Martin", "1234"));
+//        System.out.println("validateUser: " + dm.validateUser("Martin", "1234"));
     }
 }

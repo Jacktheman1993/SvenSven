@@ -18,11 +18,11 @@ public class DataSource
     
     public DataSource()
     {
-        dataSource.setServerName("");
+        dataSource.setServerName("159.89.110.12");
         dataSource.setPort(3306);
         dataSource.setDatabaseName("cupcake");
-        dataSource.setUser("alek");
-        dataSource.setPassword("pyg25ckd");
+        dataSource.setUser("swoop");
+        dataSource.setPassword("airdog86");
     }
     
     public MysqlDataSource getDataSource()

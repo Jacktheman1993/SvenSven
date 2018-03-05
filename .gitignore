@@ -59,6 +59,6 @@ $RECYCLE.BIN/
 *.lnk
 
 # DB
-*.Cupcake_web/src/main/java/Datbase/DataSource.java
+**/DataSource.java
 
 # End of https://www.gitignore.io/api/macos,windows,netbeans

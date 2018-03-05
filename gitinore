@@ -59,6 +59,6 @@ $RECYCLE.BIN/
 *.lnk
 
 #DB
-**/
+**/DataSource.java
 
 # End of https://www.gitignore.io/api/macos,windows,netbeans

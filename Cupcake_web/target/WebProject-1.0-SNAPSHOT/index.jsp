@@ -15,9 +15,6 @@
     <body>
         <h1>Hello World!</h1>
         <p>Hej Martin</p>
-        <p>hej alek</p>
-        <p>hej Simon</p>
-        <p>hej Simon</p>
-        <p>hej Simon</p>
+        <p>hej alek</p><p>hej alek</p><p>hej alek</p>
     </body>
 </html>

@@ -1,6 +1,6 @@
 Datbase\DataSource.class
-Datbase\DataMapper.class
 Datbase\DataMapperI.class
+Datbase\DataMapper.class
 Datbase\User.class
 Datbase\DBConnector.class
 Datbase\DataMapperTest.class

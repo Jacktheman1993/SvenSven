@@ -15,9 +15,7 @@
     <body>
         <h1>Hello World!</h1>
         <p>Hej Martin</p>
-<<<<<<< HEAD
         <p>hej alek</p><p>hej alek</p><p>hej alek</p>
-=======
         <p>Hej Martin</p>
         <p>Hej Martin</p>
         <p>hej alek</p>
@@ -26,6 +24,6 @@
         <p>hej Simon</p>
         <p>hej Simon</p>
         <p>hej Simon</p>
->>>>>>> a35130899ce072eeeb43a83314f37f58f16012ba
+
     </body>
 </html>

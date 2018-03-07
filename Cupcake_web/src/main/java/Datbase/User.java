@@ -7,7 +7,7 @@ package Datbase;
 
 /**
  *
- * @author simon
+ * @author alle sammen her
  */
 public class User {
     int user_id;

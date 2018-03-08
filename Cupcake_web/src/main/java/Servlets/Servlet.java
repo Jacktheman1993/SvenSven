@@ -61,7 +61,7 @@ public class Servlet extends HttpServlet
 
                     dm.createUser(new User(username, password));
 
-                    response.sendRedirect("usercreated.jsp");
+                    response.sendRedirect("userCreated.jsp");
 
                 }
                 break;

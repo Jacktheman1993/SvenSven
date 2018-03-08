@@ -1,4 +1,4 @@
-package servlets;
+package Servlets;
 
 import Datbase.DataMapper;
 import Datbase.DataSource;
@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "Servlet", urlPatterns = { "/Servlet" })
-public class Servlet extends HttpServlet
+@WebServlet(name = "Control", urlPatterns = { "/Control" })
+public class Control extends HttpServlet
 {
     DataMapper dm;
 
-    public Servlet()
+    public Control()
     {
         dm = new DataMapper(new DataSource().getDataSource());
     }
@@ -41,18 +41,18 @@ public class Servlet extends HttpServlet
 
                 }
                 break;
-//            case "search":
-//                {
-//                    String username = request.getParameter("username");
-//
-//                    ArrayList<User> users = dm.getUsers(username);
-//
-//                    request.getSession().setAttribute("users", dm.getUsers(username));
-//
-//                    response.sendRedirect("users.jsp");
-//
-//                }
-//                break;
+            case "search":
+                {
+                    String username = request.getParameter("username");
+
+                    ArrayList<User> users = dm.getUsers(username);
+
+                    request.getSession().setAttribute("users", dm.getUsers(username));
+
+                    response.sendRedirect("users.jsp");
+
+                }
+                break;
             case "create":
                 {
                     String username = request.getParameter("username");
@@ -61,7 +61,7 @@ public class Servlet extends HttpServlet
 
                     dm.createUser(new User(username, password));
 
-                    response.sendRedirect("userCreated.jsp");
+                    response.sendRedirect("usercreated.jsp");
 
                 }
                 break;
@@ -77,7 +77,7 @@ public class Servlet extends HttpServlet
                     {
                         user.setUsername(username);
                         user.setPassword(password);
-//                        user.setAdmin(admin);
+                       
 
                         dm.updateUser(user);
 

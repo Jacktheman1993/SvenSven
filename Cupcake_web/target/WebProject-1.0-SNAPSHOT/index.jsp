@@ -1,25 +1,23 @@
-<%-- 
-    Document   : index
-    Created on : 05-03-2018, 10:57:27
-    Author     : The Overlord
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="Style.css" rel="stylesheet" type="text/css"/>
-        <title>JSP Page</title>
+        <link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+        <title>WebProject</title>
     </head>
     <body>
-     
         
-        <h1>WebProject Cupcake</h1>
+        <%@include file="includes/menu.jsp" %>
+        
+        <p>OutputWithOut: <% out.print("Output..."); %></p>
+        <p>OutputWith=: <%= "Output..." %></p>
+        
+        <h1>FullStackApp</h1>
         
         <h2>SEARCH USER</h2>
         
-        <form id="formSearch" action="Servlet" method="post">
+        <form id="formSearch" action="Control" method="post">
             <label id="labelUsername" for="username">Username</label>
             <input type="text" name="username" />
             <input type="hidden" name="origin" value="search" />
@@ -28,11 +26,13 @@
         
         <h2>CREATE USER</h2>
         
-        <form id="formCreate" action="Servlet" method="post">
+        <form id="formCreate" action="Control" method="post">
             <label id="labelUsername" for="username">Username</label>
             <input type="text" name="username" />
             <label id="labelPassword" for="password">Password</label>
             <input type="text" name="password" />
+            <label id="labelAdmin" for="admin">Admin</label>
+            <input type="text" name="admin" />
             <input type="hidden" name="origin" value="create" />
             <input type="submit" value="CREATE USER" />
         </form>

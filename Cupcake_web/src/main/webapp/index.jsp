@@ -1,10 +1,9 @@
 <%@include file="includes/header.jsp" %>
-        <p>OutputWithOut: <% out.print("Output..."); %></p>
-        <p>OutputWith=: <%= "Output..." %></p>
+
         
-        <h1>FullStackApp</h1>
+        <h1>Front Page</h1>
         
-        <h2>SEARCH USER</h2>
+        <center><h2>SEARCH USER</h2></center>
         
         <form id="formSearch" action="Control" method="post">
             <label id="labelUsername" for="username">Username</label>
@@ -13,15 +12,13 @@
             <input type="submit" value="SEARCH USER" />
         </form>
         
-        <h2>CREATE USER</h2>
+        <center><h2>CREATE USER</h2></center>
         
         <form id="formCreate" action="Control" method="post">
             <label id="labelUsername" for="username">Username</label>
             <input type="text" name="username" />
             <label id="labelPassword" for="password">Password</label>
             <input type="text" name="password" />
-            <label id="labelAdmin" for="admin">Admin</label>
-            <input type="text" name="admin" />
             <input type="hidden" name="origin" value="create" />
             <input type="submit" value="CREATE USER" />
         </form>

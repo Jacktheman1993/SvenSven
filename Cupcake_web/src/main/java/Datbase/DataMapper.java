@@ -175,36 +175,33 @@ public class DataMapper implements DataMapperI {
 
         return false;
     }
-//
-//    @Override
-//    public boolean updateUser(User u)
-//    {
-//        try
-//        {
-//            dbc.open();
-//
-//            String sql = "update user from user where id = user_id set "
-//                    + "user_id = " + u.getUser_id()
-//                    + "username = '" + u.getUsername() + "', "
-//                    + "email = '" + u.getEmail() + "', "
-//                    + "bal = '" + u.getBal() + "', "
-//                    + "password = '" + u.getPassword() + "', "
-//                    + "where user_id = " + u.getUser_id();
-//                    
-//
-//            dbc.executeUpdate(sql);
-//
-//            dbc.close();
-//
-//            return true;
-//        }
-//        catch (SQLException e)
-//        {
-//            e.printStackTrace();
-//        }
-//
-//        return false;
-//    }
+
+    @Override
+    public boolean updateUser(User u)
+    {
+        try
+        {
+            dbc.open();
+
+            String sql = "update user from user where username = username set "
+                    + "username = '" + u.getUsername() + "', "
+                    + "password = '" + u.getPassword() + "', "
+                    + "where username = " + u.getUsername();
+                    
+
+            dbc.executeUpdate(sql);
+
+            dbc.close();
+
+            return true;
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+
+        return false;
+    }
 
     public boolean createUser(User u)
     {

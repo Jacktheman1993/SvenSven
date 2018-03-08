@@ -33,7 +33,6 @@
             <input type="text" name="username" />
             <label id="labelPassword" for="password">Password</label>
             <input type="text" name="password" />
-            <input type="text" name="admin" />
             <input type="hidden" name="origin" value="create" />
             <input type="submit" value="CREATE USER" />
         </form>

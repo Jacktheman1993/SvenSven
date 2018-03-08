@@ -65,40 +65,40 @@ public class Servlet extends HttpServlet
 
                 }
                 break;
-//            case "update":
-//                {
-//                    String username = request.getParameter("username");
-//                    String password = request.getParameter("password");
-////                    boolean admin = Boolean.parseBoolean(request.getParameter("admin"));
-//
-//                    User user = (User) request.getSession().getAttribute("user");
-//
-//                    if (user != null)
-//                    {
-//                        user.setUsername(username);
-//                        user.setPassword(password);
-////                        user.setAdmin(admin);
-//
-////                        dm.updateUser(user);
-//
-//                        response.sendRedirect("userupdated.jsp");
-//                    }                
-//
-//                }
-//                break;
-//            case "delete":
-//                {
-//                    User user = (User) request.getSession().getAttribute("user");
-//
-//                    if (user != null)
-//                    {
-//                        dm.deleteUser(user.getId());
-//
-//                        response.sendRedirect("userdeleted.jsp");
-//                    }                
-//
-//                }
-//                break;
+            case "update":
+                {
+                    String username = request.getParameter("username");
+                    String password = request.getParameter("password");
+//                    boolean admin = Boolean.parseBoolean(request.getParameter("admin"));
+
+                    User user = (User) request.getSession().getAttribute("user");
+
+                    if (user != null)
+                    {
+                        user.setUsername(username);
+                        user.setPassword(password);
+//                        user.setAdmin(admin);
+
+                        dm.updateUser(user);
+
+                        response.sendRedirect("userupdated.jsp");
+                    }                
+
+                }
+                break;
+            case "delete":
+                {
+                    User user = (User) request.getSession().getAttribute("user");
+
+                    if (user != null)
+                    {
+                        dm.deleteUser(user.getUsername());
+
+                        response.sendRedirect("userdeleted.jsp");
+                    }                
+
+                }
+                break;
         }
     }
 

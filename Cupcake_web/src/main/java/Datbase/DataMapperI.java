@@ -23,6 +23,6 @@ public interface DataMapperI {
 //    public User getUser(int id);
     public User getUser(String username);
     public boolean deleteUser(String username);
-//    public boolean updateUser(User u);
+    public boolean updateUser(User u);
     public boolean createUser(User u);
 }

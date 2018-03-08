@@ -57,3 +57,61 @@ form
 {
     background: yellow;
 }
+footer{
+    background-color: #cccccc;
+    width: auto;
+    height: 150px;
+    float: top;
+}
+footer a{
+    margin-right: 20px;
+}
+head{
+    width: auto;
+    height: 100px;
+    background-color: #cccccc;
+    float: bottom;
+}
+#shopbox{
+    width: auto;
+    height: 400px;
+    border: 500px;
+    border: solid;
+    border-color: black;
+    margin: 10px;
+    padding: 5px;
+}
+#left-box{
+    width: 350px;
+    height: 375px;
+    float: left;
+    border: 5px;
+    border: solid;
+    border-color: black;
+    margin: 5px;
+    padding: 5px;
+}
+#right-box{
+    width: 350px;
+    height: 375px;
+    float: right;
+    border: 5px;
+    border: solid;
+    border-color: black;
+    margin: 5px;
+    padding: 5px;
+}
+.shopimg{
+    width: 100px;
+    height: 150px;
+    border: solid;
+    border-color: blue;
+    border: 5px;
+    margin: 5px;
+}
+.shopimg img{
+    width: 100px;
+    height: 150px;
+    margin: 5px;
+    float: right;
+}

@@ -1,14 +1,4 @@
-<%@page import="java.util.ArrayList"%>
-<%@page import="Datbase.User"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>WebProject - Users</title>
-    </head>
-    <body>
-        
+<%@include file="includes/header.jsp" %>
         <h1>USERS</h1>
         
         <%
@@ -34,6 +24,4 @@
         %>
         
         <a href="index.jsp">BACK...</a>
-        
-    </body>
-</html>
+<%@include file="includes/footer.jsp" %>

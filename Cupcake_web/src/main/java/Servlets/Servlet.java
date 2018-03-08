@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(name = "Control", urlPatterns = { "/Control" })
+@WebServlet(name = "Servlet", urlPatterns = { "/Servlet" })
 public class Servlet extends HttpServlet
 {
     DataMapper dm;

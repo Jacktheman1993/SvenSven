@@ -38,13 +38,13 @@ public class DataMapper implements DataMapperI {
             ResultSet resultset = dbc.executeQuery(sql);
             while (resultset.next())
             {
-                int user_id = resultset.getInt("user_id");
+//                int user_id = resultset.getInt("user_id");
                 String username = resultset.getString("username");
-                String email = resultset.getString("email");
-                int bal = resultset.getInt("bal");
+//                String email = resultset.getString("email");
+//                int bal = resultset.getInt("bal");
                 String password = resultset.getString("password");
 
-                User u = new User(user_id, username, email, bal, password);
+                User u = new User(username, password);
 
                 users.add(u);
             }
@@ -73,13 +73,10 @@ public class DataMapper implements DataMapperI {
 
             while (resultset.next())
             {
-                int user_id = resultset.getInt("user_id");
                 String username = resultset.getString("username");
-                String email = resultset.getString("email");
-                int bal = resultset.getInt("bal");
                 String password = resultset.getString("password");
 
-                User u = new User(user_id, username, email, bal, password);
+                User u = new User(username, password);
 
                 users.add(u);
             }
@@ -94,7 +91,7 @@ public class DataMapper implements DataMapperI {
         return users;
     }
 
-    @Override
+    /*@Override
     public User getUser(int id)
     {
         User q = null;
@@ -125,7 +122,7 @@ public class DataMapper implements DataMapperI {
         }
         return u;
     }
-
+*/
     @Override
     public User getUser(String name)
     {
@@ -138,13 +135,10 @@ public class DataMapper implements DataMapperI {
 
             while (resultset.next())
             {
-                int user_id = resultset.getInt("user_id");
                 String username = resultset.getString("username");
-                String email = resultset.getString("email");
-                int bal = resultset.getInt("bal");
                 String password = resultset.getString("password");
 
-                return new User(user_id, username, email, bal, password);
+                return new User(username, password);
             }
 
             dbc.close();
@@ -158,16 +152,16 @@ public class DataMapper implements DataMapperI {
     }
 
     @Override
-    public boolean deleteUser(int id)
+    public boolean deleteUser(String username)
     {
         try
         {
             dbc.open();
 
-            String sql = "delete from user where user_id = " + id + ";";
+            String sql = "delete from user where username = " + username + ";";
             dbc.executeUpdate(sql);
 
-            sql = "delete from user where user_id = " + id + ";";
+            sql = "delete from user where username = " + username + ";";
             dbc.executeUpdate(sql);
 
             dbc.close();
@@ -219,11 +213,8 @@ public class DataMapper implements DataMapperI {
             dbc.open();
 
             //String sql = "insert into user values(null, "
-                    String sql = "insert into user (user_id, username, email, bal, password) values("
-                    + "'" + u.getCount() + "', "
+                    String sql = "insert into user (username, password) values("
                     + "'" + u.getUsername() + "', "
-                    + "'" + u.getEmail()+ "', "
-                    + "'" + u.getBal() + "', "
                     + "'" + u.getPassword()+"'" + ")";
 
             dbc.executeUpdate(sql);
@@ -263,11 +254,8 @@ public class DataMapper implements DataMapperI {
             
             if (resultSet.next())
             {
-                int id = resultSet.getInt("user_id");
 //                boolean admin = resultSet.getInt("admin") > 0;
-                String email = resultSet.getString("email");
-                int bal = resultSet.getInt("bal");
-                user = new User(id, username, email, bal, password);
+                user = new User(username, password);
             }
 
             dbc.close();

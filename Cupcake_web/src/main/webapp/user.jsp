@@ -40,6 +40,15 @@
             <input type="submit" value="UPDATE USER" />
         </form>
         
+        <br>
+        <br>
+        <br>
+        
+        <form action="Control" method="post">
+            <h3>Go to webshop</h3>
+            <input type="button" name="origin" value="GO" />
+        </form>
+        
         <h2>DELETE USER</h2>
         
         <form action="Control" method="post">

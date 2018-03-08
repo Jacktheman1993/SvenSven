@@ -10,20 +10,24 @@ package Datbase;
  * @author alle sammen her
  */
 public class User {
+
     int user_id;
     String username;
     String email;
     int bal;
     String password;
+    int count = 0;
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
     public User(int user_id, String username) {
         this.user_id = user_id;
         this.username = username;
     }
 
-
-
-    
     public User(int user_id, String username, String email, int bal, String password) {
         this.user_id = user_id;
         this.username = username;
@@ -32,6 +36,11 @@ public class User {
         this.password = password;
     }
 
+    public int getCount() {
+        count++;
+        return count;
+
+    }
 
     public int getUser_id() {
         return user_id;
@@ -77,6 +86,5 @@ public class User {
     public String toString() {
         return "Person{" + "user_id=" + user_id + ", username=" + username + ", email=" + email + ", bal=" + bal + ", password=" + password + '}';
     }
-    
-    
+
 }

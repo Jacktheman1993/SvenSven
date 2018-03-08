@@ -220,7 +220,7 @@ public class DataMapper implements DataMapperI {
 
             //String sql = "insert into user values(null, "
                     String sql = "insert into user (user_id, username, email, bal, password) values("
-                    + "'" + u.getUser_id() + "', "
+                    + "'" + u.getCount() + "', "
                     + "'" + u.getUsername() + "', "
                     + "'" + u.getEmail()+ "', "
                     + "'" + u.getBal() + "', "

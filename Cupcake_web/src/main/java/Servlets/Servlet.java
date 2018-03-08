@@ -1,98 +1,122 @@
-package Servlets;
+package servlets;
 
-import Logic.Price;
+import Datbase.DataMapper;
+import Datbase.DataSource;
+import Datbase.User;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author Alek
- */
+@WebServlet(name = "Control", urlPatterns = { "/Control" })
+public class Servlet extends HttpServlet
+{
+    DataMapper dm;
 
-@WebServlet(name="webServlet", urlPatterns = {"/webServlet"})
-public class Servlet extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    public Servlet()
+    {
+        dm = new DataMapper(new DataSource().getDataSource());
+    }
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         response.setContentType("text/html;charset=UTF-8");
         
-        Price price = new Price();
-        
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet webServlet</title>");
-            out.println("</head>");
-            out.println("<body>");
-            System.out.println("#####" + request.getParameter("attr1"));
-            System.out.println("#####" + request.getParameter("attr2"));
-            System.out.println("#####" + request.getParameter("choice"));
-            Double attr1 = Double.parseDouble(request.getParameter("attr1"));
-            Double attr2 = Double.parseDouble(request.getParameter("attr2"));
-            String choiceName = request.getParameter("choice");
-//            if (!valid.valid(attr1, attr2)) {
-//                response.sendRedirect("error.html");
-//            }
-            
-//            out.println("<h1>Servlet webServlet at " + price.calcPrice(choiceName,attr1, attr2) + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        switch(request.getParameter("origin"))
+        {
+            case "login":
+                {
+                    String username = request.getParameter("username");
+                    String password = request.getParameter("password");
+
+                    User user = dm.validateUser(username, password);
+
+                    request.getSession().setAttribute("user", user);
+
+                    //request.getRequestDispatcher("user.jsp").forward(request, response);
+                    response.sendRedirect("user.jsp");                
+
+                }
+                break;
+//            case "search":
+//                {
+//                    String username = request.getParameter("username");
+//
+//                    ArrayList<User> users = dm.getUsers(username);
+//
+//                    request.getSession().setAttribute("users", dm.getUsers(username));
+//
+//                    response.sendRedirect("users.jsp");
+//
+//                }
+//                break;
+            case "create":
+                {
+                    String username = request.getParameter("username");
+                    String password = request.getParameter("password");
+//                    boolean admin = Boolean.parseBoolean(request.getParameter("admin"));
+
+                    dm.createUser(new User(username, password));
+
+                    response.sendRedirect("usercreated.jsp");
+
+                }
+                break;
+//            case "update":
+//                {
+//                    String username = request.getParameter("username");
+//                    String password = request.getParameter("password");
+////                    boolean admin = Boolean.parseBoolean(request.getParameter("admin"));
+//
+//                    User user = (User) request.getSession().getAttribute("user");
+//
+//                    if (user != null)
+//                    {
+//                        user.setUsername(username);
+//                        user.setPassword(password);
+////                        user.setAdmin(admin);
+//
+////                        dm.updateUser(user);
+//
+//                        response.sendRedirect("userupdated.jsp");
+//                    }                
+//
+//                }
+//                break;
+//            case "delete":
+//                {
+//                    User user = (User) request.getSession().getAttribute("user");
+//
+//                    if (user != null)
+//                    {
+//                        dm.deleteUser(user.getId());
+//
+//                        response.sendRedirect("userdeleted.jsp");
+//                    }                
+//
+//                }
+//                break;
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+    {
         processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
-    public String getServletInfo() {
+    public String getServletInfo()
+    {
         return "Short description";
-    }// </editor-fold>
-
+    }
 }

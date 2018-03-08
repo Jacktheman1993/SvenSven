@@ -13,17 +13,30 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <p>Hej Martin</p>
-        <p>hej alek</p><p>hej alek</p><p>hej alek</p>
-        <p>Hej Martin</p>
-        <p>Hej Martin</p>
-        <p>hej alek</p>
-        <p>hej alek</p>
-        <p>hej alek</p>
-        <p>hej Simon</p>
-        <p>hej Simon</p>
-        <p>hej Simon</p>
-
+     
+        
+        <h1>WebProject Cupcake</h1>
+        
+        <h2>SEARCH USER</h2>
+        
+        <form id="formSearch" action="Servlet" method="post">
+            <label id="labelUsername" for="username">Username</label>
+            <input type="text" name="username" />
+            <input type="hidden" name="origin" value="search" />
+            <input type="submit" value="SEARCH USER" />
+        </form>
+        
+        <h2>CREATE USER</h2>
+        
+        <form id="formCreate" action="Servlet" method="post">
+            <label id="labelUsername" for="username">Username</label>
+            <input type="text" name="username" />
+            <label id="labelPassword" for="password">Password</label>
+            <input type="text" name="password" />
+            <input type="text" name="admin" />
+            <input type="hidden" name="origin" value="create" />
+            <input type="submit" value="CREATE USER" />
+        </form>
+        
     </body>
 </html>

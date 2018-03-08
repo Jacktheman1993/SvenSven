@@ -28,23 +28,23 @@
             <input type="text" name="password" placeholder="Password" />
             <input type="text" name="admin" placeholder="Admin" />            
             <input type="hidden" name="origin" value="update" />
-            <input type="submit" value="UPDATE USER" />
+            <button type="submit">Update User</button>
         </form>
         
         <br>
         <br>
         <br>
         
-        <form action="Control" method="post">
-            <h3>Go to webshop</h3>
-            <input type="button" name="origin" value="GO" />
+        <form action="shop.jsp" method="post">
+            <h2>GO TO WEBSHOP</h2>
+            <button type="submit">GO</button>
         </form>
         
         <h2>DELETE USER</h2>
         
         <form action="Control" method="post">
             <input type="hidden" name="origin" value="delete" />
-            <input type="submit" value="DELETE USER" />
+            <button type="submit">Delete User</button>
         </form>
         
         <a href="index.jsp">BACK...</a>

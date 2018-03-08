@@ -20,13 +20,13 @@
                 <option value="choco">Chocolate</option>
                 <option value="van">Vanilla</option>
                 <option value="nut">Nutmeg</option>
-                <option value="pis">Pistacio</option>
+                <option value="pis">Pistachio</option>
                 <option value="al">Almond</option>
                 
             </select>
             <form action="shop.jsp" method="post">
                 <p>Quantity:</p> <input type="number" name="quantity" min="1" max="10">
-                <input type="submit" value="Chesh Out">
+                <input type="submit" value="Check Out">
             </form>
             </div>
             <div id="right-box">

@@ -1,3 +1,11 @@
+/* index background */
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://i.pinimg.com/736x/55/03/94/550394c428e268868aa73e509302b84c--neopolitan-cupcakes-ice-cream-cupcakes.jpg");
+    min-height: 90%;
+}
+
 a
 {
     display: block;

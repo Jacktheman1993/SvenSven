@@ -24,4 +24,4 @@
         %>
         
         <a href="index.jsp">BACK...</a>
-<%@include file="includes/footer.jsp" %>
+

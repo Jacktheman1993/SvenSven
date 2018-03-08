@@ -2,14 +2,13 @@
 <body>
 <center><h4>Follow us on social media</h4></center>
 <footer>
+    <center>
 <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
-<a href="#" class="fa fa-google"></a>
-<a href="#" class="fa fa-linkedin"></a>
 <a href="#" class="fa fa-youtube"></a>
 <a href="#" class="fa fa-instagram"></a>
-<a href="#" class="fa fa-pinterest"></a>
 <a href="#" class="fa fa-snapchat-ghost"></a>
+</center>
 </footer>
 </body>
 </html>

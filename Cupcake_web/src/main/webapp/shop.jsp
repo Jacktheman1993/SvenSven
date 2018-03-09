@@ -29,13 +29,17 @@
                 <input type="submit" value="Check Out">
             </form>
             </div>
-            <div id="right-box">
-                <div class="shopimg">
-                    <img src="includes/billeder/10550968_10152867614835101_4636379771796450625_n.jpg" alt="Mads">
+           <div id="right-box">
+                    <div class="shopimg">
+                    </div>
+                    <div class="shopimg">
+                    </div>
+                     <div class="shopimg">
+                         
+                    </div>
+                    <div class="shopimg">
+                         
+                    </div>
                 </div>
-                <div class="shopimg">
-                    <img src="includes/billeder/moist-chocolate-cupcakes-5.jpg" alt="Cupcake">
-                </div>
-            </div>
         </div>
 <%@include file="includes/footer.jsp" %>

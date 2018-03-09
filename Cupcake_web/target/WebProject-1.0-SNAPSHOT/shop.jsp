@@ -31,14 +31,16 @@
             </div>
            <div id="right-box">
                     <div class="shopimg">
+                    <img src="includes/billeder/10550968_10152867614835101_4636379771796450625_n.jpg" alt="Mads">
                     </div>
                     <div class="shopimg">
-                    </div>
-                     <div class="shopimg">
-                         
+                        <img src="includes/billeder/moist-chocolate-cupcakes-5.jpg" alt="Cupcake">
                     </div>
                     <div class="shopimg">
-                         
+                    <img src="includes/billeder/10550968_10152867614835101_4636379771796450625_n.jpg" alt="Mads">
+                    </div>
+                    <div class="shopimg">
+                        <img src="includes/billeder/moist-chocolate-cupcakes-5.jpg" alt="Cupcake">
                     </div>
                 </div>
         </div>

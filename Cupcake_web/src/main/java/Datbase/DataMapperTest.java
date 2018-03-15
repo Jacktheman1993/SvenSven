@@ -10,7 +10,12 @@ package Datbase;
  * @author simon
  */
 public class DataMapperTest {
-       public static void main(String[] args)
+
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args)
     {
         DataMapper dm = new DataMapper(new DataSource().getDataSource());
         

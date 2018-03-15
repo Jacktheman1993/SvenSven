@@ -17,7 +17,9 @@ public class ValidUser {
     /**
      *
      * @param username
+     * sætter username med username med this
      * @param password
+     * sætter passeword med password med this
      */
     public ValidUser(String username, String password) {
         this.username = username;

@@ -14,6 +14,7 @@ public class DataMapperTest {
     /**
      *
      * @param args
+     * vi tester vores forskellige methoder
      */
     public static void main(String[] args)
     {

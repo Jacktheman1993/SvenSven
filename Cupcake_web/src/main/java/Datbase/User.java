@@ -21,7 +21,9 @@ public class User {
     /**
      *
      * @param username
+     * sætter username med username med this
      * @param password
+     * sætter password med password med this
      */
     public User(String username, String password) {
         this.username = username;

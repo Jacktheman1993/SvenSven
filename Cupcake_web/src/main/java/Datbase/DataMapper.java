@@ -30,6 +30,7 @@ public class DataMapper implements DataMapperI {
     }
 
     /**
+     * @return
      * settet en ny ArrayList op med users
      * åbner dbc
      * køre igennem, hvor vi tage alle user fra databasen
@@ -40,7 +41,6 @@ public class DataMapper implements DataMapperI {
      * laver et nyt object med user
      * lukker dbc
      * catcher exception 
-     * @return
      * retuner users
      */
     @Override
@@ -311,8 +311,8 @@ public class DataMapper implements DataMapperI {
      * string sql hvor alt bliver tagwt fra user hvor username og password er lige med ?
      * der bliver kørt en prepared statment med sql
      * @param username
+     * * køre prepared stastment med setString username
      * @param password
-     * køre prepared stastment med setString username
      * køre prepared statement med setString password
      * sætter resultSet lige med preparedStatement.
      * køre if med ny user

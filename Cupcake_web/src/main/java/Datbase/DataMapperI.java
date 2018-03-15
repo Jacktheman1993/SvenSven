@@ -22,13 +22,16 @@ public interface DataMapperI {
     /**
      *
      * @return
+     * retuner getUsers
      */
     public ArrayList<User> getUsers();
 
     /**
      *
      * @param username
+     * String username
      * @return
+     * retuner getUsers
      */
     public ArrayList<User> getUsers(String username);
 //    public User getUser(int id);
@@ -36,28 +39,36 @@ public interface DataMapperI {
     /**
      *
      * @param username
+     * string username
      * @return
+     * retuner getUser
      */
     public User getUser(String username);
 
     /**
      *
      * @param username
+     * string username
      * @return
+     * retuner deleteUser
      */
     public boolean deleteUser(String username);
 
     /**
      *
      * @param u
+     * String username u
      * @return
+     * retuner updateUser
      */
     public boolean updateUser(User u);
 
     /**
      *
      * @param u
+     * User u
      * @return
+     * retuner createUser
      */
     public boolean createUser(User u);
 }

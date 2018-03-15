@@ -21,7 +21,7 @@ public class Control extends HttpServlet
     DataMapper dm;
 
     /**
-     *
+     *laver et nyt object med DataMapper
      */
     public Control()
     {
@@ -31,9 +31,15 @@ public class Control extends HttpServlet
     /**
      *
      * @param request
+     * sender request til servlet
      * @param response
+     * retuner respone
      * @throws ServletException
+     * kaster SevletException
      * @throws IOException
+     * kaster IOException
+     * der køre response med setContentType
+     * herefter er der en switch case med login, search, create, update, delete og med break til sidst
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
@@ -119,9 +125,13 @@ public class Control extends HttpServlet
     /**
      *
      * @param request
+     * sender request til servlet
      * @param response
+     * retuner respone
      * @throws ServletException
+     * kaster SevletException
      * @throws IOException
+     * kaster IOException
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -132,9 +142,13 @@ public class Control extends HttpServlet
     /**
      *
      * @param request
+     * sender request til servlet
      * @param response
+     * retuner respone
      * @throws ServletException
+     * kaster SevletException
      * @throws IOException
+     * kaster IOException
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
@@ -145,6 +159,7 @@ public class Control extends HttpServlet
     /**
      *
      * @return
+     * retuner tekst
      */
     @Override
     public String getServletInfo()

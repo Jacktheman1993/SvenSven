@@ -36,6 +36,7 @@ public class DBConnector
     /**
      *
      * @param dataSource
+     * dataSouse til dataSourse med this
      */
     public DBConnector(DataSource dataSource) {
         this.dataSource = dataSource;
@@ -44,6 +45,7 @@ public class DBConnector
     /**
      *
      * @param dataSource
+     * setter dataSourse til dataSourse med this
      */
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
@@ -52,6 +54,7 @@ public class DBConnector
     /**
      *
      * @throws SQLException
+     * kaster Exception på SQL
      */
     public void open() throws SQLException
     {
@@ -64,6 +67,7 @@ public class DBConnector
     /**
      *
      * @throws SQLException
+     * kaster Exception til SQL
      */
     public void close() throws SQLException
     {
@@ -88,7 +92,9 @@ public class DBConnector
      *
      * @param sql
      * @return
+     * Retuner resultet vi får fra executeQuery(sql)
      * @throws SQLException
+     * kaster Exception
      */
     public ResultSet executeQuery(String sql) throws SQLException
     {
@@ -101,7 +107,9 @@ public class DBConnector
     /**
      *
      * @param sql
+     * vi opdater med executeUpdate(sql)
      * @throws SQLException
+     * kaster Exception
      */
     public void executeUpdate(String sql) throws SQLException
     {
@@ -113,7 +121,9 @@ public class DBConnector
      *
      * @param sql
      * @return
+     * retuner prepareStatment med connection
      * @throws SQLException
+     * kaster Exceptions
      */
     public PreparedStatement preparedStatement(String sql) throws SQLException
     {

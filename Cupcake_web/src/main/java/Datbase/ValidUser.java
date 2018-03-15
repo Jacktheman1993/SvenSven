@@ -27,6 +27,7 @@ public class ValidUser {
     /**
      *
      * @return
+     * returner username
      */
     public String getUsername() {
         return username;
@@ -35,6 +36,7 @@ public class ValidUser {
     /**
      *
      * @param username
+     * settet username
      */
     public void setUsername(String username) {
         this.username = username;
@@ -43,6 +45,7 @@ public class ValidUser {
     /**
      *
      * @return
+     * retuner password
      */
     public String getPassword() {
         return password;
@@ -51,6 +54,7 @@ public class ValidUser {
     /**
      *
      * @param password
+     * settet password
      */
     public void setPassword(String password) {
         this.password = password;

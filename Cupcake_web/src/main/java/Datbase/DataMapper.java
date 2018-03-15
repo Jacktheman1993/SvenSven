@@ -22,6 +22,7 @@ public class DataMapper implements DataMapperI {
     /**
      *
      * @param ds
+     * settet DataSourse med dbc
      */
     public DataMapper(DataSource ds)
     {
@@ -29,8 +30,18 @@ public class DataMapper implements DataMapperI {
     }
 
     /**
-     *
+     * settet en ny ArrayList op med users
+     * åbner dbc
+     * køre igennem, hvor vi tage alle user fra databasen
+     * settet resultset med dbc.executeQuery(sql)
+     * laver while loop
+     * laver String med username
+     * laver String med password
+     * laver et nyt object med user
+     * lukker dbc
+     * catcher exception 
      * @return
+     * retuner users
      */
     @Override
     public ArrayList<User> getUsers()
@@ -69,7 +80,16 @@ public class DataMapper implements DataMapperI {
     /**
      *
      * @param un
+     * laver Arraylist med String un
+     * dbc open
+     * laver sql med hvor alt i user bliver hentet fra databasen
+     * laver string med user og password som er i  et while loop
+     * laver et nyt objest med user
+     * added user
+     * lukker dbc
+     * catcher exception
      * @return
+     * retuner users
      */
     @Override
     public ArrayList<User> getUsers(String un)
@@ -139,7 +159,13 @@ public class DataMapper implements DataMapperI {
     /**
      *
      * @param name
+     * dbc open
+     * sql med alt fra user hvor user er lige med username
+     * laver strng med username og password i et while loop
+     * retuner ny user
+     * catcher exception 
      * @return
+     * retuner null
      */
 
     @Override
@@ -173,7 +199,13 @@ public class DataMapper implements DataMapperI {
     /**
      *
      * @param username
+     * dbc open
+     * laver string sql hvor der bliver slettet hvor username er lige med username, hvor der blever kørt dbc.executeQuery(sql)
+     * lukker dbc
+     * retuner true
+     * catcher exception 
      * @return
+     * retuner false
      */
     @Override
     public boolean deleteUser(String username)
@@ -203,7 +235,14 @@ public class DataMapper implements DataMapperI {
     /**
      *
      * @param u
+     * dbc open
+     * string sql hvor der bliver opdateret user mae username og password
+     * køre dbc executeUpdate(sql)
+     * lukker dbc
+     * retuner true
+     * catcher exception 
      * @return
+     * retuner false
      */
     @Override
     public boolean updateUser(User u)
@@ -235,7 +274,13 @@ public class DataMapper implements DataMapperI {
     /**
      *
      * @param u
+     * String sql, hvor der bliver indsat ind i user med username og password
+     * køre dbc executeUpdate
+     * lukker dbc
+     * retuner true
+     * catcher Exception
      * @return
+     * retuner false
      */
     public boolean createUser(User u)
     {
@@ -263,10 +308,18 @@ public class DataMapper implements DataMapperI {
     }
     
     /**
-     *
+     * string sql hvor alt bliver tagwt fra user hvor username og password er lige med ?
+     * der bliver kørt en prepared statment med sql
      * @param username
      * @param password
+     * køre prepared stastment med setString username
+     * køre prepared statement med setString password
+     * sætter resultSet lige med preparedStatement.
+     * køre if med ny user
+     * lukker bdc
+     * catcher exception
      * @return
+     * retuner user
      */
     public User validateUser(String username, String password)
     {

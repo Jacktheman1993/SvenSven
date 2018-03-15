@@ -31,6 +31,7 @@ public class User {
     /**
      *
      * @return
+     * retuner username
      */
     public String getUsername() {
         return username;
@@ -39,6 +40,7 @@ public class User {
     /**
      *
      * @param username
+     * setter username
      */
     public void setUsername(String username) {
         this.username = username;
@@ -47,6 +49,7 @@ public class User {
     /**
      *
      * @return
+     * returner password
      */
     public String getPassword() {
         return password;
@@ -55,6 +58,7 @@ public class User {
     /**
      *
      * @param password
+     * settet password
      */
     public void setPassword(String password) {
         this.password = password;

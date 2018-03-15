@@ -16,10 +16,6 @@ import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author The Overlord
- */
 public class DBConnector
 {
     private DataSource dataSource;
@@ -27,32 +23,17 @@ public class DBConnector
     private Statement statement;
     private ResultSet resultSet;
 
-    /**
-     *
-     */
     public DBConnector() {
     }
 
-    /**
-     *
-     * @param dataSource
-     */
     public DBConnector(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
-    /**
-     *
-     * @param dataSource
-     */
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
     }
     
-    /**
-     *
-     * @throws SQLException
-     */
     public void open() throws SQLException
     {
         if(connection == null || connection.isClosed())
@@ -61,10 +42,6 @@ public class DBConnector
         }
     }
     
-    /**
-     *
-     * @throws SQLException
-     */
     public void close() throws SQLException
     {
         if(resultSet != null)
@@ -84,12 +61,6 @@ public class DBConnector
         }
     }
     
-    /**
-     *
-     * @param sql
-     * @return
-     * @throws SQLException
-     */
     public ResultSet executeQuery(String sql) throws SQLException
     {
         statement = connection.createStatement();
@@ -98,23 +69,12 @@ public class DBConnector
         return resultSet;
     }
     
-    /**
-     *
-     * @param sql
-     * @throws SQLException
-     */
     public void executeUpdate(String sql) throws SQLException
     {
         statement = connection.createStatement();
         statement.executeUpdate(sql);
     }
     
-    /**
-     *
-     * @param sql
-     * @return
-     * @throws SQLException
-     */
     public PreparedStatement preparedStatement(String sql) throws SQLException
     {
         return connection.prepareStatement(sql);

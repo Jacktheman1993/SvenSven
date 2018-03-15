@@ -11,30 +11,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author The Overlord
- */
 @WebServlet(name = "Control", urlPatterns = { "/Control" })
 public class Control extends HttpServlet
 {
     DataMapper dm;
 
-    /**
-     *
-     */
     public Control()
     {
         dm = new DataMapper(new DataSource().getDataSource());
     }
     
-    /**
-     *
-     * @param request
-     * @param response
-     * @throws ServletException
-     * @throws IOException
-     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         response.setContentType("text/html;charset=UTF-8");
@@ -116,36 +102,18 @@ public class Control extends HttpServlet
         }
     }
 
-    /**
-     *
-     * @param request
-     * @param response
-     * @throws ServletException
-     * @throws IOException
-     */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         processRequest(request, response);
     }
 
-    /**
-     *
-     * @param request
-     * @param response
-     * @throws ServletException
-     * @throws IOException
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
     {
         processRequest(request, response);
     }
 
-    /**
-     *
-     * @return
-     */
     @Override
     public String getServletInfo()
     {

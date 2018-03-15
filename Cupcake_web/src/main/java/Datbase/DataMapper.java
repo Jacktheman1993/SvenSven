@@ -13,25 +13,18 @@ import java.sql.SQLException;
 
 /**
  *
- * @author The Overlord
  */
 public class DataMapper implements DataMapperI {
 
     private DBConnector dbc = new DBConnector();
 
-    /**
-     *
-     * @param ds
-     */
     public DataMapper(DataSource ds)
     {
         dbc.setDataSource (ds);
     }
 
-    /**
-     *
-     * @return
-     */
+
+ 
     @Override
     public ArrayList<User> getUsers()
     {
@@ -66,11 +59,6 @@ public class DataMapper implements DataMapperI {
         return users;
     }
 
-    /**
-     *
-     * @param un
-     * @return
-     */
     @Override
     public ArrayList<User> getUsers(String un)
     {
@@ -135,13 +123,6 @@ public class DataMapper implements DataMapperI {
         return u;
     }
 */
-
-    /**
-     *
-     * @param name
-     * @return
-     */
-
     @Override
     public User getUser(String name)
     {
@@ -170,11 +151,6 @@ public class DataMapper implements DataMapperI {
         return null;
     }
 
-    /**
-     *
-     * @param username
-     * @return
-     */
     @Override
     public boolean deleteUser(String username)
     {
@@ -200,11 +176,6 @@ public class DataMapper implements DataMapperI {
         return false;
     }
 
-    /**
-     *
-     * @param u
-     * @return
-     */
     @Override
     public boolean updateUser(User u)
     {
@@ -232,11 +203,6 @@ public class DataMapper implements DataMapperI {
         return false;
     }
 
-    /**
-     *
-     * @param u
-     * @return
-     */
     public boolean createUser(User u)
     {
         try
@@ -262,12 +228,6 @@ public class DataMapper implements DataMapperI {
         return false;
     }
     
-    /**
-     *
-     * @param username
-     * @param password
-     * @return
-     */
     public User validateUser(String username, String password)
     {
         User user = null;

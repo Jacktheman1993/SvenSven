@@ -5,11 +5,13 @@
  */
 package Datbase;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.sql.PreparedStatement;
 import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -17,7 +19,7 @@ import java.sql.SQLException;
  */
 public class DataMapper implements DataMapperI {
 
-    private DBConnector dbc = new DBConnector();
+    private final DBConnector dbc = new DBConnector();
 
     /**
      *
@@ -42,7 +44,32 @@ public class DataMapper implements DataMapperI {
      * lukker dbc
      * catcher exception 
      * retuner users
+     * @throws java.lang.Exception
      */
+     public void createOrder(Order order ) throws Exception {
+        try {
+            dbc.open();
+            
+            String SQL = "INSERT INTO order (order_id, order_pri, order_na, fk_bot_id, fk_top_id) VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement ps = dbc.preparedStatement(SQL);
+            ps.setInt( 1, order.orderID );
+            ps.setInt( 2, order.orderPrice );
+            ps.setString( 3, order.ownerName );
+            ps.setInt( 4, order.forKeyIdBot );
+            ps.setInt( 5, order.forKeyIdTop );
+            ps.executeUpdate();
+            ResultSet ids = ps.getGeneratedKeys();
+            ids.next();
+            int id = ids.getInt( 1 );
+            order.setOrderID(id );
+        } catch ( SQLException ex ) {
+            throw new Exception("lol" );
+        }
+    }
+    
+    
+    
+    
     @Override
     public ArrayList<User> getUsers()
     {
@@ -282,6 +309,7 @@ public class DataMapper implements DataMapperI {
      * @return
      * retuner false
      */
+    @Override
     public boolean createUser(User u)
     {
         try

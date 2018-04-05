@@ -1,0 +1,9 @@
+Datbase\DataSource.class
+Servlets\Control.class
+Datbase\DataMapperI.class
+Datbase\ValidUser.class
+Datbase\DataMapper.class
+Datbase\User.class
+Datbase\DBConnector.class
+Datbase\DataMapperTest.class
+Logic\Price.class

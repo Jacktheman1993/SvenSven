@@ -32,6 +32,7 @@ public class DataMapper implements DataMapperI {
     }
 
     /**
+     * @param order
      * @return
      * settet en ny ArrayList op med users
      * åbner dbc
@@ -62,6 +63,7 @@ public class DataMapper implements DataMapperI {
             ids.next();
             int id = ids.getInt( 1 );
             order.setOrderID(id );
+            dbc.close();
         } catch ( SQLException ex ) {
             throw new Exception("lol" );
         }
